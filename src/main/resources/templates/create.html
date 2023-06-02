@@ -2,14 +2,12 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="layout :: head"></head>
 <body>
-<h3>Add Product</h3>
+<h3>Add tech</h3>
 <p>
-    <a th:href="@{/}">
-        Back to products list
-    </a>
+    <a href="/"> Back to tech stack list </a>
 </p>
 <div id="form">
-    <form action="#" th:action="@{/product/save}" th:object="${product}"
+    <form action="#" th:action="@{/tech/save}" th:object="${tech}"
           method="POST" novalidate="novalidate">
         <input type="hidden" th:field="*{id}"/>
         <div>
@@ -17,12 +15,12 @@
             <input type="text" th:field="*{name}"/>
         </div>
         <div>
-            <label>Price</label>
-            <input type="text" th:field="*{price}"/>
+            <label>Level</label>
+            <input type="text" th:field="*{level}"/>
         </div>
         <div>
-            <label>Manufacture</label>
-            <input type="text" th:field="*{manufacture}"/>
+            <label>Since</label>
+            <input type="text" th:field="*{since}"/>
         </div>
         <input type="submit" value="Save" />
     </form>

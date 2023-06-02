@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head"></head>
+<body>
+<h3>View tech stacks</h3>
+<p>
+    <a href="/">
+        Back to tech stacks list
+    </a>
+</p>
+<div id="detail">
+    Name: <span th:text="${tech.getName()}"></span><br>
+    Level: <span th:text="${tech.getLevel()}"></span><br>
+    Since: <span th:text="${tech.getSince()}"></span>
+</div>
+<footer th:replace="layout :: footer"></footer>
+</body>
+</html>

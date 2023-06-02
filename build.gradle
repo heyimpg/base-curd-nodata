@@ -26,6 +26,7 @@ dependencies {
 	//utils
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
 	//db
 	runtimeOnly 'com.h2database:h2'

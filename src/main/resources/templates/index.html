@@ -2,38 +2,36 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="layout :: head"></head>
 <body>
-<h3>Products</h3>
+<h3>techs</h3>
 <p>
-    <a th:href="@{/product/create}">
-        Add new product
-    </a>
+    <a th:href="@{/tech/create}"> Add new tech </a>
 </p>
 <div class="notify">
     <div th:if="${success}">
         <span th:text="${success}"></span>
     </div>
 </div>
-<table id = "products">
+<table id = "techs">
     <thead>
     <tr>
-        <th>Number</th>
+        <th>ID</th>
         <th>Name</th>
-        <th>Price</th>
-        <th>Manufacture</th>
+        <th>Level</th>
+        <th>Since</th>
         <th>Edit</th>
         <th>Delete</th>
         <th>View</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="product,rowStat : ${products}">
-        <td th:text="${rowStat.index + 1}"></td>
-        <td th:text="${product.getName()}"></td>
-        <td th:text="${product.getPrice()}"></td>
-        <td th:text="${product.getManufacture()}"></td>
-        <td><a th:href="@{/product/{id}/edit(id=${product.getId()})}">edit</a></td>
-        <td><a th:href="@{/product/{id}/delete(id=${product.getId()})}">delete</a></td>
-        <td><a th:href="@{/product/{id}/view(id=${product.getId()})}">view</a></td>
+    <tr th:each="tech,rowStat : ${techs}">
+        <td th:text="${tech.getId()}"></td>
+        <td th:text="${tech.getName()}"></td>
+        <td th:text="${tech.getLevel()}"></td>
+        <td th:text="${tech.getSince()}"></td>
+        <td><a th:href="@{/tech/{id}/edit(id=${tech.getId()})}">edit</a></td>
+        <td><a th:href="@{/tech/{id}/delete(id=${tech.getId()})}">delete</a></td>
+        <td><a th:href="@{/tech/{id}(id=${tech.getId()})}">view</a></td>
     </tr>
     </tbody>
 </table>
