@@ -2,29 +2,35 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="layout :: head"></head>
 <body>
-<h3>Add tech</h3>
-<p>
-    <a href="/"> Back to tech stack list </a>
-</p>
-<div id="form">
-    <form action="#" th:action="@{/tech/save}" th:object="${tech}"
-          method="POST" novalidate="novalidate">
-        <input type="hidden" th:field="*{id}"/>
-        <div>
-            <label>Name</label>
-            <input type="text" th:field="*{name}"/>
+    <header th:replace="layout :: header('Add tech')"></header>
+    <div class="container">
+        <a href="/">
+            <button class="btn btn-outline-primary mt-2" >
+                Back to tech stack list
+            </button>
+        </a>
+
+        <div id="form" class="mt-2">
+            <form action="#" th:action="@{/tech/save}" th:object="${tech}"
+                  method="POST" novalidate="novalidate">
+                <input type="hidden" th:field="*{id}"/>
+                <div>
+                    <label>Name</label>
+                    <input type="text" th:field="*{name}"/>
+                </div>
+                <div>
+                    <label>Level</label>
+                    <input type="text" th:field="*{level}"/>
+                </div>
+                <div>
+                    <label>Since</label>
+                    <input type="text" th:field="*{since}"/>
+                </div>
+                <input type="submit" value="Save" />
+            </form>
         </div>
-        <div>
-            <label>Level</label>
-            <input type="text" th:field="*{level}"/>
-        </div>
-        <div>
-            <label>Since</label>
-            <input type="text" th:field="*{since}"/>
-        </div>
-        <input type="submit" value="Save" />
-    </form>
-</div>
-<footer th:replace="layout :: footer"></footer>
+    </div>
+
+    <footer th:replace="layout :: footer"></footer>
 </body>
 </html>

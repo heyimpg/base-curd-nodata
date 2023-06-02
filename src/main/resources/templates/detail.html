@@ -2,17 +2,20 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="layout :: head"></head>
 <body>
-<h3>View tech stacks</h3>
-<p>
-    <a href="/">
-        Back to tech stacks list
-    </a>
-</p>
-<div id="detail">
-    Name: <span th:text="${tech.getName()}"></span><br>
-    Level: <span th:text="${tech.getLevel()}"></span><br>
-    Since: <span th:text="${tech.getSince()}"></span>
-</div>
-<footer th:replace="layout :: footer"></footer>
+    <header th:replace="layout :: header('Detail tech stack')"></header>
+    <div class="container">
+        <a href="/">
+            <button class="btn btn-outline-primary mt-2" >
+                Back to tech stack list
+            </button>
+        </a>
+
+        <div id="detail mt-2">
+            Name: <span th:text="${tech.getName()}"></span><br>
+            Level: <span th:text="${tech.getLevel()}"></span><br>
+            Since: <span th:text="${tech.getSince()}"></span>
+        </div>
+    </div>
+    <footer th:replace="layout :: footer"></footer>
 </body>
 </html>

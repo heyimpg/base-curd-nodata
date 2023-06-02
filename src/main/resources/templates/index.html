@@ -2,40 +2,46 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="layout :: head"></head>
 <body>
-<h3>techs</h3>
-<p>
-    <a th:href="@{/tech/create}"> Add new tech </a>
-</p>
-<div class="notify">
-    <div th:if="${success}">
-        <span th:text="${success}"></span>
+    <header th:replace="layout :: header('Tech Stacks')"></header>
+    <div class="container">
+        <a th:href="@{/tech/create}">
+            <button class="btn btn-outline-primary mt-2" >
+                Add new tech
+            </button>
+        </a>
+
+        <div class="notify mt-2">
+            <div th:if="${success}">
+                <span th:text="${success}"></span>
+            </div>
+        </div>
+
+        <div class="content mt-2">
+            <table id = "techs" class="text-center">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Level</th>
+                        <th>Since</th>
+                        <th colspan="3">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="tech,rowStat : ${techs}">
+                        <td th:text="${tech.getId()}"></td>
+                        <td th:text="${tech.getName()}"></td>
+                        <td th:text="${tech.getLevel()}"></td>
+                        <td th:text="${tech.getSince()}"></td>
+                        <td><a th:href="@{/tech/{id}/edit(id=${tech.getId()})}">edit</a></td>
+                        <td><a th:href="@{/tech/{id}/remove(id=${tech.getId()})}">remove</a></td>
+                        <td><a th:href="@{/tech/{id}(id=${tech.getId()})}">view</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-</div>
-<table id = "techs">
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Level</th>
-        <th>Since</th>
-        <th>Edit</th>
-        <th>Delete</th>
-        <th>View</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="tech,rowStat : ${techs}">
-        <td th:text="${tech.getId()}"></td>
-        <td th:text="${tech.getName()}"></td>
-        <td th:text="${tech.getLevel()}"></td>
-        <td th:text="${tech.getSince()}"></td>
-        <td><a th:href="@{/tech/{id}/edit(id=${tech.getId()})}">edit</a></td>
-        <td><a th:href="@{/tech/{id}/delete(id=${tech.getId()})}">delete</a></td>
-        <td><a th:href="@{/tech/{id}(id=${tech.getId()})}">view</a></td>
-    </tr>
-    </tbody>
-</table>
-<footer th:replace="layout :: footer"></footer>
+    <footer th:replace="layout :: footer"></footer>
 </body>
 </html>
 

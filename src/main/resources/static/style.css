@@ -1,13 +1,3 @@
-h3 {
-    background-color: blue;
-    color: white;
-    padding: 10px 0 10px 20px;
-}
-
-footer {
-    margin: 10px 0;
-}
-
 #techs {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
@@ -25,19 +15,19 @@ footer {
 
 #techs tr:hover {
     background-color: #ddd;
+    cursor: pointer;
 }
 
 #techs th {
     padding-top: 12px;
     padding-bottom: 12px;
-    text-align: left;
     background-color: #4CAF50;
     color: white;
 }
 
 input[type=text], input[type=email] {
     width: 100%;
-    padding: 12px 0px;
+    padding: 5px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
@@ -67,6 +57,7 @@ form {
     background-color: #f2f2f2;
     padding: 20px;
 }
+
 
 .notify span {
     font-size: 15px;
