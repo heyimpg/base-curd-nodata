@@ -1,0 +1,67 @@
+2023-06-05 15:04:46 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TABLE_NAME" not found; SQL statement:
+select * from table_name [42102-200]
+2023-06-05 15:04:54 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TBL_USER" not found; SQL statement:
+select * from tbl_user [42102-200]
+2023-06-05 15:06:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TBL_USER" not found; SQL statement:
+select * from tbl_user [42102-200]
+2023-06-05 15:40:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TBL_TECH_STACK" not found; SQL statement:
+select techstack0_.id as id1_0_, techstack0_.level as level2_0_, techstack0_.name as name3_0_, techstack0_.since as since4_0_ from tbl_tech_stack techstack0_ [42102-200]
+2023-06-05 15:41:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TBL_TECH_STACK" not found; SQL statement:
+select techstack0_.id as id1_0_, techstack0_.level as level2_0_, techstack0_.name as name3_0_, techstack0_.since as since4_0_ from tbl_tech_stack techstack0_ [42102-200]
+2023-06-05 15:41:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TBL_TECH_STACK" not found; SQL statement:
+select techstack0_.id as id1_0_, techstack0_.level as level2_0_, techstack0_.name as name3_0_, techstack0_.since as since4_0_ from tbl_tech_stack techstack0_ [42102-200]
+2023-06-05 15:41:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TBL_TECH_STACK" not found; SQL statement:
+select techstack0_.id as id1_0_, techstack0_.level as level2_0_, techstack0_.name as name3_0_, techstack0_.since as since4_0_ from tbl_tech_stack techstack0_ [42102-200]
+2023-06-05 17:35:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TBL_TECH_STACK" not found; SQL statement:
+select techstack0_.id as id1_0_, techstack0_.level as level2_0_, techstack0_.name as name3_0_, techstack0_.since as since4_0_ from tbl_tech_stack techstack0_ [42102-200]
+2023-06-05 17:36:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TBL_TECH_STACK" not found; SQL statement:
+select techstack0_.id as id1_0_, techstack0_.level as level2_0_, techstack0_.name as name3_0_, techstack0_.since as since4_0_ from tbl_tech_stack techstack0_ [42102-200]
+2023-06-05 17:38:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TBL_TECH_STACK" not found; SQL statement:
+select techstack0_.id as id1_0_, techstack0_.level as level2_0_, techstack0_.name as name3_0_, techstack0_.since as since4_0_ from tbl_tech_stack techstack0_ [42102-200]
+2023-06-05 17:40:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TBL_TECH_STACK" not found; SQL statement:
+select techstack0_.id as id1_0_, techstack0_.level as level2_0_, techstack0_.name as name3_0_, techstack0_.since as since4_0_ from tbl_tech_stack techstack0_ [42102-200]
+2023-06-05 17:47:47 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TBL_TECHSTACK" not found; SQL statement:
+DROP TABLE tbl_TechStack [42102-200]
+2023-06-05 17:47:47 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "TBL_TECH_STACK[*]"; expected "TRUNCATE"; SQL statement:
+TBL_TECH_STACK [42001-200]
+2023-06-05 17:48:02 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TBL_TECHSTACK" not found; SQL statement:
+select * from tbl_TechStack [42102-200]
+2023-06-05 17:48:22 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TBL_TECHSTACK" not found; SQL statement:
+select * from tbl_TechStack [42102-200]
+2023-06-05 17:48:44 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TBL_TECH_STACK" not found; SQL statement:
+select * from tbl_Tech_Stack [42102-200]
+2023-06-05 17:49:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TBL_TECHSTACK" already exists; SQL statement:
+CREATE TABLE tbl_TechStack (
+                          id VARCHAR(250)  PRIMARY KEY NOT NULL,
+                          name VARCHAR(250) NOT NULL,
+                          level INT NOT NULL,
+                          since DATE
+) [42101-200]
+2023-06-05 17:49:03 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TBL_TECHSTACK" already exists; SQL statement:
+CREATE TABLE tbl_TechStack (
+                          id VARCHAR(250)  PRIMARY KEY NOT NULL,
+                          name VARCHAR(250) NOT NULL,
+                          level INT NOT NULL,
+                          since DATE
+) [42101-200]
+2023-06-05 17:49:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TBL_TECH_STACK" not found; SQL statement:
+select techstack0_.id as id1_0_, techstack0_.level as level2_0_, techstack0_.name as name3_0_, techstack0_.since as since4_0_ from tbl_tech_stack techstack0_ [42102-200]
