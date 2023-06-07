@@ -26,7 +26,7 @@ public class TechStack {
     private int level;
 
     @Column(name = "since")
-    @DateTimeFormat(pattern="dd-MM-yyyy")
+    @DateTimeFormat(pattern="yyyy-MM-dd")
     private LocalDate since;
 
 //    public String getSince() {

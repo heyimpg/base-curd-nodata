@@ -6,6 +6,7 @@ import com.spring.basecurd.Service.TechService;
 import com.spring.basecurd.Utils.DateTimeFormatUtils;
 import com.spring.basecurd.Utils.UuidUtils;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
+@Primary
 public class TechServiceImpl implements TechService {
 
     private final Map<String, TechStack> techStack;

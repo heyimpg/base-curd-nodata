@@ -29,11 +29,11 @@ public class TechController {
         return "create";
     }
 
-    @PostMapping("save")
-    public String save(TechStack techStack, RedirectAttributes redirect) {
+    @PostMapping("create")
+    public String create(TechStack techStack, RedirectAttributes redirect) {
         techStack.setId(UuidUtils.generateUUID());
         techService.create(techStack);
-        redirect.addFlashAttribute(MessageConstants.SUCCESS, "Save tech successfully!");
+        redirect.addFlashAttribute(MessageConstants.SUCCESS, "Create new tech successfully!");
         return BACK_TO_HOMEPAGE;
     }
 
@@ -52,12 +52,13 @@ public class TechController {
 
     @GetMapping("{id}/remove")
     public String remove(@PathVariable String id, Model model) {
-        model.addAttribute("tech", techService.findById(id));
-        return "remove";
+        TechStack result = techService.findById(id);
+        model.addAttribute("tech", result);
+        return "delete";
     }
 
     @PostMapping("remove")
-    public String remove(TechStack techStack, RedirectAttributes redirect) {
+    public String remove(@ModelAttribute("tech") TechStack techStack, RedirectAttributes redirect) {
         techService.remove(techStack.getId());
         redirect.addFlashAttribute(MessageConstants.SUCCESS, "Removed tech successfully!");
         return BACK_TO_HOMEPAGE;
@@ -65,7 +66,8 @@ public class TechController {
 
     @GetMapping("{id}")
     public String detail(@PathVariable String id, Model model) {
-        model.addAttribute( "tech", techService.findById(id));
+        TechStack result = techService.findById(id);
+        model.addAttribute( "tech", result);
         return "detail";
     }
 }

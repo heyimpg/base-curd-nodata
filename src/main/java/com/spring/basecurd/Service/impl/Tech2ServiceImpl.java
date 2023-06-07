@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-@Primary
+//@Primary
 public class Tech2ServiceImpl implements TechService {
     @Autowired
     private TechRepository techRepository;
@@ -22,21 +22,21 @@ public class Tech2ServiceImpl implements TechService {
 
     @Override
     public TechStack findById(String id) {
-        return null;
+        return techRepository.findById(id).get();
     }
 
     @Override
     public void create(TechStack techStack) {
-
+        techRepository.insert(techStack.getId(), techStack.getName(), techStack.getLevel(), techStack.getSince().toString());
     }
 
     @Override
     public void update(String id, TechStack techStack) {
-
+        techRepository.save(techStack);
     }
 
     @Override
     public void remove(String id) {
-
+        techRepository.delete(techRepository.getById(id));
     }
 }
