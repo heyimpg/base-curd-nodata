@@ -19,7 +19,6 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-@Primary
 public class TechServiceImpl implements TechService {
 
     private final Map<String, TechStack> techStack;
